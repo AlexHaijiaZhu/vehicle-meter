@@ -6,6 +6,20 @@ A local-first vehicle management app. One Docker container and one SQLite file f
 
 The interface is inspired by Notion: light gray sidebar, white canvas, hairline borders and restrained typography.
 
+## Screenshots
+
+| Dashboard | Expenses |
+| --- | --- |
+| ![Dashboard](docs/screenshots/dashboard.png) | ![Expenses](docs/screenshots/expenses.png) |
+
+| Energy | Maintenance |
+| --- | --- |
+| ![Energy](docs/screenshots/energy.png) | ![Maintenance](docs/screenshots/maintenance.png) |
+
+| Reports | 1200×630 share card |
+| --- | --- |
+| ![Reports](docs/screenshots/reports.png) | ![Share card](docs/screenshots/share-card.png) |
+
 ## Features
 
 - **Expenses**: fuel, charging, parking, tolls, insurance, repairs, car wash and other costs; category breakdown, monthly trend and cost per kilometre.
@@ -377,3 +391,10 @@ node scripts/make-icons.mjs
 ## License
 
 Personal project, no specific open-source license. Check third-party data and manufacturer manual copyrights before use.
+
+---
+
+<p align="center">
+  <sub>🐟 <b>Powered by Big Fat Fish (DeepSeek)</b></sub><br>
+  <sub>You drive, you fuel, it writes code. Not guaranteed to save fuel — only to save you from writing this app.</sub>
+</p>

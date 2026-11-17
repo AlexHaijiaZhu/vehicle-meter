@@ -6,6 +6,20 @@ Una aplicación de gestión de vehículos con enfoque local. Un contenedor Docke
 
 La interfaz se inspira en Notion: barra lateral gris claro, fondo blanco, bordes finos y tipografía sobria.
 
+## Capturas de pantalla
+
+| Panel | Gastos |
+| --- | --- |
+| ![Panel](docs/screenshots/dashboard.png) | ![Gastos](docs/screenshots/expenses.png) |
+
+| Energía | Mantenimiento |
+| --- | --- |
+| ![Energía](docs/screenshots/energy.png) | ![Mantenimiento](docs/screenshots/maintenance.png) |
+
+| Informes | Tarjeta 1200×630 |
+| --- | --- |
+| ![Informes](docs/screenshots/reports.png) | ![Tarjeta para compartir](docs/screenshots/share-card.png) |
+
 ## Funciones
 
 - **Gastos**: combustible, carga, aparcamiento, peajes, seguro, reparaciones, lavado y otros; desglose por categoría, tendencia mensual y coste por kilómetro.
@@ -377,3 +391,10 @@ node scripts/make-icons.mjs
 ## Licencia
 
 Proyecto personal, sin licencia open source específica. Comprueba los derechos de datos de terceros y de los manuales de fabricantes antes de usarlo.
+
+---
+
+<p align="center">
+  <sub>🐟 <b>Impulsado por el Pez Gordo (DeepSeek)</b></sub><br>
+  <sub>Tú conduces, tú repostas, él escribe el código. No garantiza ahorrar combustible: solo evitar que escribas esta app.</sub>
+</p>

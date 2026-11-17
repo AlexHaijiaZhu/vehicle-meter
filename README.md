@@ -6,6 +6,20 @@
 
 界面风格参考 Notion：浅灰侧栏、白底、细边框、克制的排版与配色。
 
+## 截图
+
+| 概览 | 费用 |
+| --- | --- |
+| ![用车概览](docs/screenshots/dashboard.png) | ![费用管理](docs/screenshots/expenses.png) |
+
+| 能耗 | 保养 |
+| --- | --- |
+| ![能耗分析](docs/screenshots/energy.png) | ![保养管理](docs/screenshots/maintenance.png) |
+
+| 报告 | 1200×630 分享卡片 |
+| --- | --- |
+| ![用车报告](docs/screenshots/reports.png) | ![分享卡片](docs/screenshots/share-card.png) |
+
 ## 功能
 
 - **费用管理**：加油、充电、停车、过路费、保险、维修、洗车、其他；费用构成、月度趋势、每公里成本。
@@ -397,3 +411,10 @@ node scripts/make-icons.mjs
 ## License
 
 个人项目，未附带特定开源许可证。使用前请自行确认第三方数据与厂商手册的版权要求。
+
+---
+
+<p align="center">
+  <sub>🐟 <b>Powered by 大肥鱼（DeepSeek）</b></sub><br>
+  <sub>车你开，油你加，代码它写。大肥鱼出品：不一定省油，但一定省心。</sub>
+</p>

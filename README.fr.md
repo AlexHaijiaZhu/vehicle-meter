@@ -6,6 +6,20 @@ Une application de gestion de véhicule locale. Un conteneur Docker et un fichie
 
 L'interface s'inspire de Notion : barre latérale gris clair, fond blanc, bordures fines et typographie sobre.
 
+## Captures d'écran
+
+| Tableau de bord | Dépenses |
+| --- | --- |
+| ![Tableau de bord](docs/screenshots/dashboard.png) | ![Dépenses](docs/screenshots/expenses.png) |
+
+| Énergie | Entretien |
+| --- | --- |
+| ![Énergie](docs/screenshots/energy.png) | ![Entretien](docs/screenshots/maintenance.png) |
+
+| Rapports | Carte de partage 1200×630 |
+| --- | --- |
+| ![Rapports](docs/screenshots/reports.png) | ![Carte de partage](docs/screenshots/share-card.png) |
+
 ## Fonctionnalités
 
 - **Dépenses** : carburant, recharge, stationnement, péages, assurance, réparation, lavage et autres ; répartition par catégorie, tendance mensuelle et coût au kilomètre.
@@ -377,3 +391,10 @@ node scripts/make-icons.mjs
 ## Licence
 
 Projet personnel, sans licence open source spécifique. Vérifiez les droits des données tierces et des carnets constructeur avant utilisation.
+
+---
+
+<p align="center">
+  <sub>🐟 <b>Propulsé par le Gros Poisson (DeepSeek)</b></sub><br>
+  <sub>Vous conduisez, vous faites le plein, il écrit le code. Pas garanti d'économiser du carburant — juste de vous éviter d'écrire cette app.</sub>
+</p>
