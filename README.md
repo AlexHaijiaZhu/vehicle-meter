@@ -1,5 +1,7 @@
 # 车记 · Vehicle Meter
 
+**中文** · [English](README.en.md) · [Français](README.fr.md) · [Español](README.es.md)
+
 本地优先的用车管理应用。一个 Docker 容器、一个 SQLite 文件，覆盖费用、能耗、保养、报告、多车、WebDAV 备份与 PWA 安装。
 
 界面风格参考 Notion：浅灰侧栏、白底、细边框、克制的排版与配色。
