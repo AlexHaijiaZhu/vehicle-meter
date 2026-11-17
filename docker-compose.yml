@@ -1,0 +1,23 @@
+services:
+  vehicle-meter:
+    build: .
+    image: vehicle-meter:latest
+    container_name: vehicle-meter
+    restart: unless-stopped
+    init: true
+    ports:
+      - "${PORT:-8080}:8080"
+    environment:
+      TZ: ${TZ:-Asia/Shanghai}
+      # 可选：设置后浏览器会弹出 HTTP Basic Auth 登录框
+      APP_PASSWORD: ${APP_PASSWORD:-}
+      # 容器内 MCP server 通过这个变量认证
+      VEHICLE_METER_PASSWORD: ${APP_PASSWORD:-}
+      VEHICLE_METER_URL: http://127.0.0.1:8080
+    volumes:
+      - vehicle-meter-data:/data
+    # 如果想直接查看/拷贝 SQLite 文件，改用 bind mount：
+    # - ./data:/data
+
+volumes:
+  vehicle-meter-data:

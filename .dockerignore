@@ -1,0 +1,14 @@
+node_modules
+.npm-cache
+.tools
+data
+test
+qa.mjs
+.git
+.github
+.gitignore
+*.log
+.env
+public/mobile-test.html
+public/canvas-test.html
+public/canvas-test.js

@@ -1,0 +1,12 @@
+node_modules/
+.npm-cache/
+.tools/
+data/
+*.log
+.env
+qa.mjs
+public/mobile-test.html
+public/mobile-test.js
+public/canvas-test.html
+public/canvas-test.js
+.DS_Store

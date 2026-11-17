@@ -1,0 +1,52 @@
+{
+  "id": "/",
+  "name": "车记 · 用车管理",
+  "short_name": "车记",
+  "description": "本地优先的用车管理：费用、油耗电耗、保养计划、用车报告与多车管理。",
+  "lang": "zh-CN",
+  "dir": "ltr",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "portrait-primary",
+  "background_color": "#f7f7f5",
+  "theme_color": "#f7f7f5",
+  "categories": ["productivity", "finance", "utilities"],
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "记一笔费用",
+      "short_name": "记一笔",
+      "description": "打开费用页并新增记录",
+      "url": "/#/expenses",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "查看用车报告",
+      "short_name": "报告",
+      "description": "打开月度用车报告",
+      "url": "/#/reports",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}
