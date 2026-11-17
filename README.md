@@ -101,67 +101,7 @@ volumes:
   vehicle-meter-data:
 ```
 
-> 我当前环境没有你的 GitHub 账号授权，也没有 Docker，因此无法代为创建仓库或推送；上面的工作流与命令可直接使用。你在 GitHub 上创建空仓库后，执行 `git push` 即可；tag 推送后 Actions 会自动发布 GHCR 镜像。
-
-### 发布到 Docker Hub（可选）
-
-镜像可自行构建推送，仓库已附带 GitHub Actions 工作流：`.github/workflows/docker-publish.yml`，自动构建 `linux/amd64` 与 `linux/arm64`。
-
-**手动推送**
-
-```bash
-docker login
-
-# 单架构
-docker build -t <dockerhub-user>/vehicle-meter:1.0.0 \
-               -t <dockerhub-user>/vehicle-meter:latest .
-docker push <dockerhub-user>/vehicle-meter:1.0.0
-docker push <dockerhub-user>/vehicle-meter:latest
-
-# 多架构（需要 buildx）
-docker buildx build \
-  --platform linux/amd64,linux/arm64 \
-  -t <dockerhub-user>/vehicle-meter:1.0.0 \
-  -t <dockerhub-user>/vehicle-meter:latest \
-  --push .
-```
-
-**GitHub Actions 自动发布**
-
-1. 在 Docker Hub 创建仓库 `vehicle-meter`。
-2. 在 GitHub 仓库的 **Settings → Secrets and variables → Actions** 添加：
-   - `DOCKERHUB_USERNAME`：Docker Hub 用户名
-   - `DOCKERHUB_TOKEN`：Docker Hub **Access Token**（Read & Write），不要用登录密码
-3. 推送版本标签：
-
-```bash
-git tag v1.0.0
-git push origin v1.0.0
-```
-
-工作流会推送 `1.0.0`、`1.0`、`latest` 三个标签，并同时支持 x86 与 ARM（树莓派 / Apple Silicon）。
-
-发布后可直接用镜像启动，不再需要本地构建：
-
-```yaml
-services:
-  vehicle-meter:
-    image: <dockerhub-user>/vehicle-meter:latest
-    # build: .   # 可删除
-    container_name: vehicle-meter
-    restart: unless-stopped
-    ports:
-      - "8080:8080"
-    environment:
-      TZ: Asia/Shanghai
-      APP_PASSWORD: ${APP_PASSWORD:-}
-    volumes:
-      - vehicle-meter-data:/data
-volumes:
-  vehicle-meter-data:
-```
-
-> 如果代码不在 GitHub，使用上面的手动 `docker buildx` 命令即可。Docker Hub 的公开仓库有拉取限流，个人使用通常足够；频繁部署可考虑 GHCR 或私有仓库。
+> 工作流在 `main` 推送以及 `v*.*.*` 标签推送时自动构建并发布 GHCR 镜像，无需额外 Secret。
 
 持久化数据在命名卷 `vehicle-meter-data` 中：
 
